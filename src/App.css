@@ -37,7 +37,7 @@ body{
 
 /* banner */
 .banner{
-    background-image: url('https://images.bauerhosting.com/empire/2023/06/witcher-s3-1.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80');
+    background-image: url('https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg');
     background-size: cover;
     background-position: center center;
     height: 448px;
@@ -60,7 +60,7 @@ body{
     outline: none;
     border: none;
     font-weight: 700;
-    padding: 1rem 1rem;
+    padding: 1rem 3rem;
     margin-right: 1rem;
     background-color: rgba(51,51,51,0.5);
     color: white;

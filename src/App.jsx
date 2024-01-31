@@ -1,6 +1,17 @@
 import './App.css'
 function App() {
 
+  const Movies = [
+    {
+      src: "",
+      videoId: "",
+    },
+    {},
+    {},
+    {},
+    {}
+  ];
+
   return (
     <>
     {/* navigation */}
@@ -16,10 +27,19 @@ function App() {
       {/* banner */}
       <section className="banner">
         <div className="banner_content">
-          <h1 className="banner_title">The Witcher</h1>
+          <h1 className="banner_title">Rebel Moon</h1>
           <button className="banner_button">Play</button>
           <button className="banner_button">My List</button>
-          <h2 className="description">Opis filmu...</h2>
+          <h2 className="description">Movie description...</h2>
+        </div>
+      </section>
+
+      {/* row */}
+      <section className="row">
+        <h2>Trending now</h2>
+        <div className="row_posters">
+          <img/>
+
         </div>
       </section>
     </>
