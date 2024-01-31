@@ -3,13 +3,20 @@ function App() {
 
   const Movies = [
     {
-      src: "",
-      videoId: "",
+    src: "https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg",
+      videoId: "1",
     },
-    {},
-    {},
-    {},
-    {}
+    {src: "https://anygoodfilms.com/wp-content/uploads/2023/11/NAPO_Feature_FP_01964_r_2000x831_thumbnail.jpg",
+    videoId: "2"},
+
+    {src: "https://www.hollywoodreporter.com/wp-content/uploads/2023/07/YLpt67-410.jpg",
+    videoId: "3"},
+
+    {src: "https://nevermore-horror.com/wp-content/uploads/2018/11/IMG_0129_1.jpg",
+    videoId: "4"},
+
+    {src: "https://assets-prd.ignimgs.com/2023/01/07/a-man-called-otto-hero-1673052643920.jpg",
+    videoId: "5"},
   ];
 
   return (
@@ -38,7 +45,10 @@ function App() {
       <section className="row">
         <h2>Trending now</h2>
         <div className="row_posters">
-          <img/>
+          {Movies.map((movie) => (
+            <img className="row_poster" key="" src={movie.src}/>
+            
+          ))}
 
         </div>
       </section>
