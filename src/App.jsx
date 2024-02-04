@@ -68,7 +68,7 @@ function App() {
           <h1 className='banner_title'>{movieTitle}</h1>
           <button className='banner_button'>Play</button>
           <button className='banner_button'>My List</button>
-          <h2 className='description'>{movieDescription}</h2> {/* Używamy movieDescription w sekcji banner */}
+          <h2 className='description' style={{ width: '50%',overflowWrap: 'break-word',marginTop: '40px' }}>{movieDescription}</h2>
         </div>
       </section>
 
