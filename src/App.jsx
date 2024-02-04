@@ -5,10 +5,13 @@ import './App.css'
 function App() {
   const [trailerURL, setTrailerURL] = useState('');
   const [bannerBackground, setBannerBackground] = useState('https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg');
+  const [movieTitle, setMovieTitle] = useState('');
+  const [movieDescription, setMovieDescription] = useState('');
 
- const handleClick = (id, src) => {
-    setTrailerURL(id);
-    setBannerBackground(src);
+  const handleClick = (id, src,title, description) => {    setTrailerURL(id);
+  setBannerBackground(src);
+  setMovieTitle(title);
+  setMovieDescription(description);
   };
 
   const Movies = [
@@ -39,10 +42,10 @@ function App() {
       movieDescription: "A young woman inherits a run-down pub and discovers a dark secret within its basement - Baghead - a shape-shifting creature that will let you speak to lost loved ones, but not without consequence."
     },
 
-    {src: "https://assets-prd.ignimgs.com/2023/01/07/a-man-called-otto-hero-1673052643920.jpg",
-    videoId: "eFYUX9l-m5I",
-    movieTitle: "Baghead",
-    movieDescription: "A young woman inherits a run-down pub and discovers a dark secret within its basement - Baghead - a shape-shifting creature that will let you speak to lost loved ones, but not without consequence."
+     {src: "https://assets-prd.ignimgs.com/2023/01/07/a-man-called-otto-hero-1673052643920.jpg",
+     videoId: "eFYUX9l-m5I",
+     movieTitle: "Baghead",
+     movieDescription: "A young woman inherits a run-down pub and discovers a dark secret within its basement - Baghead - a shape-shifting creature that will let you speak to lost loved ones, but not without consequence."
   },
     
   ];
@@ -59,27 +62,27 @@ function App() {
           src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png" alt="AvatarLogo"/>
       </header>
 
-      {/* banner */}
-      <section className="banner" style={{ backgroundImage: `url('${bannerBackground}')` }}>
-        <div className="banner_content">
-          <h1 className="banner_title">Rebel Moon</h1>
-          <button className="banner_button">Play</button>
-          <button className="banner_button">My List</button>
-          <h2 className="description">Movie description...</h2>
+ {/* banner */}
+ <section className='banner' style={{ backgroundImage: `url('${bannerBackground}')` }}>
+        <div className='banner_content'>
+          <h1 className='banner_title'>{movieTitle}</h1>
+          <button className='banner_button'>Play</button>
+          <button className='banner_button'>My List</button>
+          <h2 className='description'>{movieDescription}</h2> {/* Używamy movieDescription w sekcji banner */}
         </div>
       </section>
 
- {/* row */}
- <section className="row">
-        <h2>Trending now</h2>
-        <div className="row_posters">
-          {Movies.map((movie) => (
-            <img onClick={() => handleClick(movie.videoId, movie.src)} className="row_poster" key={movie.videoId} src={movie.src} />
-          ))}
-        </div>
-      </section>
-      {trailerURL && <YouTube videoId={trailerURL} />}
-    </>
+  {/* row */}
+  <section className='row'>
+    <h2>Trending now</h2>
+    <div className='row_posters'>
+      {Movies.map((movie) => (
+        <img onClick={() => handleClick(movie.videoId, movie.src, movie.movieTitle, movie.movieDescription)} className='row_poster' key={movie.videoId} src={movie.src} />
+      ))}
+    </div>
+  </section>
+  {trailerURL && <YouTube videoId={trailerURL} />}
+</>
   );
 }
 
