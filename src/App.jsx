@@ -1,7 +1,12 @@
-import './App.css'
+import { useState } from 'react';
 import YouTube from 'react-youtube';
+import './App.css'
+
 function App() {
-  
+  const [trailerURL, setTrailerURL] = useState('');
+  const handleClick = (id) => {
+    setTrailerURL(id);
+  };
 
   const Movies = [
     {
@@ -48,13 +53,13 @@ function App() {
         <h2>Trending now</h2>
         <div className="row_posters">
           {Movies.map((movie) => (
-            <img className="row_poster" key="" src={movie.src}/>
+            <img onClick={() => handleClick(movie.id)} className="row_poster" key="" src={movie.src}/>
             
           ))}
 
         </div>
       </section>
-      <YouTube videoId="fhr3MzT6exg" />
+      {trailerURL && <YouTube videoId={trailerURL} />}
     </>
   )
 }
