@@ -1,22 +1,24 @@
 import './App.css'
+import YouTube from 'react-youtube';
 function App() {
+  
 
   const Movies = [
     {
     src: "https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg",
-      videoId: "1",
+      videoId: "fhr3MzT6exg",
     },
     {src: "https://anygoodfilms.com/wp-content/uploads/2023/11/NAPO_Feature_FP_01964_r_2000x831_thumbnail.jpg",
-    videoId: "2"},
+    videoId: "d9E8K405PRM"},
 
     {src: "https://www.hollywoodreporter.com/wp-content/uploads/2023/07/YLpt67-410.jpg",
-    videoId: "3"},
+    videoId: "RlbR5N6veqw"},
 
     {src: "https://nevermore-horror.com/wp-content/uploads/2018/11/IMG_0129_1.jpg",
-    videoId: "4"},
+    videoId: "XOsZq_5s-ak"},
 
     {src: "https://assets-prd.ignimgs.com/2023/01/07/a-man-called-otto-hero-1673052643920.jpg",
-    videoId: "5"},
+    videoId: "eFYUX9l-m5I"},
   ];
 
   return (
@@ -52,6 +54,7 @@ function App() {
 
         </div>
       </section>
+      <YouTube videoId="fhr3MzT6exg" />
     </>
   )
 }
