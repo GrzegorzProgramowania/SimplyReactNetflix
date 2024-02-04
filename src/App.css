@@ -44,7 +44,7 @@ html, body{
     /* background-size: cover; */
     background-size: 100% auto;
     background-position: center center;
-    height: 448px;
+    height: 550px;
     color: white;
     transition: background-image 0.3s ease;
   }

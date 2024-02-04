@@ -15,18 +15,36 @@ function App() {
     {
     src: "https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg",
       videoId: "fhr3MzT6exg",
+      movieTitle: "Rebel Moon",
+      movieDescription: "When a peaceful settlement on the edge of a distant moon finds itself threatened by the armies of a tyrannical ruling force, a mysterious stranger living among its villagers becomes their best hope for survival."
     },
-    {src: "https://anygoodfilms.com/wp-content/uploads/2023/11/NAPO_Feature_FP_01964_r_2000x831_thumbnail.jpg",
-    videoId: "d9E8K405PRM"},
 
-    {src: "https://www.hollywoodreporter.com/wp-content/uploads/2023/07/YLpt67-410.jpg",
-    videoId: "RlbR5N6veqw"},
+    {
+      src: "https://anygoodfilms.com/wp-content/uploads/2023/11/NAPO_Feature_FP_01964_r_2000x831_thumbnail.jpg",
+      videoId: "d9E8K405PRM",
+      movieTitle: "Napoleon",
+      movieDescription: "An epic that details the checkered rise and fall of French Emperor Napoleon Bonaparte and his relentless journey to power through the prism of his addictive, volatile relationship with his wife, Josephine..."},
+    
+    {
+      src: "https://www.hollywoodreporter.com/wp-content/uploads/2023/07/YLpt67-410.jpg",
+      videoId: "RlbR5N6veqw",
+      movieTitle: "Poor Things",
+      movieDescription: "The incredible tale about the fantastical evolution of Bella Baxter, a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter."
+    },
 
-    {src: "https://nevermore-horror.com/wp-content/uploads/2018/11/IMG_0129_1.jpg",
-    videoId: "XOsZq_5s-ak"},
+    {
+      src: "https://nevermore-horror.com/wp-content/uploads/2018/11/IMG_0129_1.jpg",
+      videoId: "XOsZq_5s-ak",
+      movieTitle: "Baghead",
+      movieDescription: "A young woman inherits a run-down pub and discovers a dark secret within its basement - Baghead - a shape-shifting creature that will let you speak to lost loved ones, but not without consequence."
+    },
 
     {src: "https://assets-prd.ignimgs.com/2023/01/07/a-man-called-otto-hero-1673052643920.jpg",
-    videoId: "eFYUX9l-m5I"},
+    videoId: "eFYUX9l-m5I",
+    movieTitle: "Baghead",
+    movieDescription: "A young woman inherits a run-down pub and discovers a dark secret within its basement - Baghead - a shape-shifting creature that will let you speak to lost loved ones, but not without consequence."
+  },
+    
   ];
 
   return (
