@@ -37,13 +37,14 @@ body{
 }
 
 /* banner */
-.banner{
-    background-image: url('https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg');
+.banner {
+    background-image: url('{currentImage}');
     background-size: cover;
     background-position: center center;
     height: 448px;
     color: white;
-}
+    transition: background-image 0.3s ease;
+  }
 
 .banner_content{
     margin-left: 30px;
@@ -74,13 +75,20 @@ body{
 
 
 .row_posters {
-    display: flex;
-    overflow-x: hidden;
+    /* display: flex; */
+    /* flex: auto; */
+    flex: 0 0 auto;
+    /* overflow-x: hidden; */
+    overflow-x: auto;
     overflow-y: hidden;
     padding: 20px;
 }
 div.row_posters{
-    width: 90%;
+    /* width: 90%; */
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    overflow-y: hidden;
 }
 
 .row_poster {

@@ -4,8 +4,11 @@ import './App.css'
 
 function App() {
   const [trailerURL, setTrailerURL] = useState('');
-  const handleClick = (id) => {
+  const [bannerBackground, setBannerBackground] = useState('https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg');
+
+ const handleClick = (id, src) => {
     setTrailerURL(id);
+    setBannerBackground(src);
   };
 
   const Movies = [
@@ -39,7 +42,7 @@ function App() {
       </header>
 
       {/* banner */}
-      <section className="banner">
+      <section className="banner" style={{ backgroundImage: `url('${bannerBackground}')` }}>
         <div className="banner_content">
           <h1 className="banner_title">Rebel Moon</h1>
           <button className="banner_button">Play</button>
@@ -48,20 +51,18 @@ function App() {
         </div>
       </section>
 
-      {/* row */}
-      <section className="row">
+ {/* row */}
+ <section className="row">
         <h2>Trending now</h2>
         <div className="row_posters">
           {Movies.map((movie) => (
-            <img onClick={() => handleClick(movie.videoId)} className="row_poster" key={movie.videoId} src={movie.src}/>
-            
+            <img onClick={() => handleClick(movie.videoId, movie.src)} className="row_poster" key={movie.videoId} src={movie.src} />
           ))}
-
         </div>
       </section>
       {trailerURL && <YouTube videoId={trailerURL} />}
     </>
-  )
+  );
 }
 
 export default App
