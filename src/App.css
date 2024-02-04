@@ -72,12 +72,15 @@ body{
     margin-left: 20px;
 }
 
+
 .row_posters {
     display: flex;
-    /* overflow-x: scroll; */
     overflow-x: hidden;
     overflow-y: hidden;
     padding: 20px;
+}
+div.row_posters{
+    width: 90%;
 }
 
 .row_poster {

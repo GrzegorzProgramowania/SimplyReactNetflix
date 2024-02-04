@@ -53,7 +53,7 @@ function App() {
         <h2>Trending now</h2>
         <div className="row_posters">
           {Movies.map((movie) => (
-            <img onClick={() => handleClick(movie.videoId)} className="row_poster" key="" src={movie.src}/>
+            <img onClick={() => handleClick(movie.videoId)} className="row_poster" key={movie.videoId} src={movie.src}/>
             
           ))}
 
