@@ -1,25 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import './App.css'
 
 function App() {
   const [trailerURL, setTrailerURL] = useState('');
   const [bannerBackground, setBannerBackground] = useState('https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg');
-  const [movieTitle, setMovieTitle] = useState('');
-  const [movieDescription, setMovieDescription] = useState('');
+  const [movieTitle, setMovieTitle] = useState('Rebel Moon');
+  const [movieDescription, setMovieDescription] = useState('When a peaceful settlement on the edge of a distant moon finds itself threatened by the armies of a tyrannical ruling force, a mysterious stranger living among its villagers becomes their best hope for survival.');
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
+
+  
   const handleClick = (id, src,title, description) => {    setTrailerURL(id);
   setBannerBackground(src);
   setMovieTitle(title);
   setMovieDescription(description);
+  setIsPageLoaded(true);
   };
 
   const Movies = [
     {
-    src: "https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg",
+      src: "https://cdn.newonce.me/uploads/images/48947/Rebel_Moon_cover_photo.jpg",
       videoId: "fhr3MzT6exg",
       movieTitle: "Rebel Moon",
-      movieDescription: "When a peaceful settlement on the edge of a distant moon finds itself threatened by the armies of a tyrannical ruling force, a mysterious stranger living among its villagers becomes their best hope for survival."
+      movieDescription: "When a peaceful settlement on the edge of a distant moon is threatened by the armies of a tyrannical ruling force, a mysterious stranger becomes their best hope for survival."
     },
 
     {
@@ -47,8 +51,18 @@ function App() {
      movieTitle: "A Man Called Otto",
      movieDescription: "Otto is a grump who's given up on life following the loss of his wife and wants to end it all. When a young family moves in nearby, he meets his match in quick-witted Marisol, leading to a friendship that will turn his world around."
   },
-    
   ];
+
+  useEffect(() => {
+    if (Movies.length > 0 && !isPageLoaded) {
+      const firstMovie = Movies[0];
+      setBannerBackground(firstMovie.src);
+      setMovieTitle(firstMovie.movieTitle);
+      setMovieDescription(firstMovie.movieDescription);
+    }
+  }, [Movies, isPageLoaded]);
+
+  
 
   return (
     <>
@@ -81,7 +95,7 @@ function App() {
       ))}
     </div>
   </section>
-  {trailerURL && <YouTube videoId={trailerURL} className="Youtube"/>}
+  {trailerURL && <YouTube videoId={trailerURL} className="youtube"/>}
 </>
   );
 }

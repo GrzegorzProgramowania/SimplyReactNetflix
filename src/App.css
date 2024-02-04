@@ -6,16 +6,13 @@ html, body{
 }
 
 /* navigation */
-
 .nav{
     position: fixed;
     top: 0;
     width: 100%;
     padding: 20px;
-
     display:flex;
     justify-content: space-between;
-
     height: 80px;
 
 }
@@ -42,7 +39,6 @@ html, body{
 .banner {
     background-image: url('{currentImage}');
     background-size: cover;
-    /* background-size: 100% auto; */
     background-position: center center;
     height: 550px;
     color: white;
@@ -79,15 +75,11 @@ html, body{
 
 .row_posters {
     display: flex;
-    /* flex: auto; */
-    /* flex: 0 0 auto; */
     overflow-x: hidden;
-    /* overflow-x: auto; */
     overflow-y: hidden;
     padding: 20px;
 }
 div.row_posters{
-    /* width: 90%; */
     width: 100%; 
     display: flex;
     justify-content: center; 
@@ -95,7 +87,6 @@ div.row_posters{
 }
 
 .row_poster {
-    /* width: 100%; */
     width: 20%;
     max-height: 100px;
     max-width: 200px;
@@ -107,11 +98,12 @@ div.row_posters{
     transform: scale(1.25);
 }
 
-.Youtube {
+/* youtube trailer */
+.youtube {
     display: block;
     margin: 20px auto; 
     max-width: 100%;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0); 
   }
