@@ -41,8 +41,8 @@ html, body{
 /* banner */
 .banner {
     background-image: url('{currentImage}');
-    /* background-size: cover; */
-    background-size: 100% auto;
+    background-size: cover;
+    /* background-size: 100% auto; */
     background-position: center center;
     height: 550px;
     color: white;
@@ -95,7 +95,8 @@ div.row_posters{
 }
 
 .row_poster {
-    width: 100%;
+    /* width: 100%; */
+    width: 20%;
     max-height: 100px;
     max-width: 200px;
     margin-right: 30px;
@@ -105,3 +106,12 @@ div.row_posters{
 .row_poster:hover {
     transform: scale(1.25);
 }
+
+.Youtube {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }

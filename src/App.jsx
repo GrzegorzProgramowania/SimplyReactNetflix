@@ -44,8 +44,8 @@ function App() {
 
      {src: "https://assets-prd.ignimgs.com/2023/01/07/a-man-called-otto-hero-1673052643920.jpg",
      videoId: "eFYUX9l-m5I",
-     movieTitle: "Baghead",
-     movieDescription: "A young woman inherits a run-down pub and discovers a dark secret within its basement - Baghead - a shape-shifting creature that will let you speak to lost loved ones, but not without consequence."
+     movieTitle: "A Man Called Otto",
+     movieDescription: "Otto is a grump who's given up on life following the loss of his wife and wants to end it all. When a young family moves in nearby, he meets his match in quick-witted Marisol, leading to a friendship that will turn his world around."
   },
     
   ];
@@ -81,7 +81,7 @@ function App() {
       ))}
     </div>
   </section>
-  {trailerURL && <YouTube videoId={trailerURL} />}
+  {trailerURL && <YouTube videoId={trailerURL} className="Youtube"/>}
 </>
   );
 }
